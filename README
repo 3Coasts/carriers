@@ -2,4 +2,10 @@
 
 * Make sure "Features" module is added to the site and enabled.
 * Enable the "Carriers" feature module.
-* Go to admin/structure/features and enable the feature
+* Go to admin/structure/features and enable the feature.
+* Go to admin/structure/types/manage/carrier and set comments to hidden.
+-- This didn't work --
+* Create a new page called "Carriers".
+* Add the Cariers block to the newly created page.
+* Add the new page to the "Useful Resources" menu.
+
