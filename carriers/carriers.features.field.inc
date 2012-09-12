@@ -80,14 +80,14 @@ function carriers_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-carrier-field_carrier_type_s_'
-  $fields['node-carrier-field_carrier_type_s_'] = array(
+  // Exported field: 'node-carrier-field_carrier_type'
+  $fields['node-carrier-field_carrier_type'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_carrier_type_s_',
+      'field_name' => 'field_carrier_type',
       'foreign keys' => array(),
       'indexes' => array(
         'value' => array(
@@ -132,7 +132,7 @@ function carriers_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_carrier_type_s_',
+      'field_name' => 'field_carrier_type',
       'label' => 'Carrier Type(s)',
       'required' => 1,
       'settings' => array(
@@ -148,14 +148,14 @@ function carriers_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-carrier-field_external_link'
-  $fields['node-carrier-field_external_link'] = array(
+  // Exported field: 'node-carrier-field_link'
+  $fields['node-carrier-field_link'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_external_link',
+      'field_name' => 'field_link',
       'foreign keys' => array(),
       'indexes' => array(),
       'module' => 'link',
@@ -198,7 +198,7 @@ function carriers_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_external_link',
+      'field_name' => 'field_link',
       'label' => 'Links',
       'required' => 0,
       'settings' => array(
@@ -292,14 +292,6 @@ function carriers_field_default_fields() {
       'settings' => array(
         'alt_field' => 0,
         'default_image' => 0,
-        'epsacrop' => array(
-          'styles' => array(
-            'thumbnail' => 0,
-            'thumbnail-mobile' => 0,
-            'thumbnail-narrow' => 0,
-            'thumbnail-normal' => 0,
-          ),
-        ),
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -311,62 +303,6 @@ function carriers_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'image',
-        'settings' => array(
-          'filefield_sources' => array(
-            'filefield_sources' => array(
-              'attach' => 0,
-              'reference' => 0,
-              'remote' => 0,
-            ),
-            'source_attach' => array(
-              'absolute' => '0',
-              'attach_mode' => 'copy',
-              'path' => 'file_attach',
-            ),
-            'source_reference' => array(
-              'autocomplete' => '0',
-            ),
-          ),
-          'insert' => 0,
-          'insert_class' => '',
-          'insert_default' => 'auto',
-          'insert_styles' => array(
-            'auto' => 'auto',
-            'image' => 0,
-            'image_association_logo' => 0,
-            'image_association_logo-mobile' => 0,
-            'image_association_logo-narrow' => 0,
-            'image_association_logo-normal' => 0,
-            'image_content_main_image' => 0,
-            'image_content_main_image-mobile' => 0,
-            'image_content_main_image-narrow' => 0,
-            'image_content_main_image-normal' => 0,
-            'image_content_main_image-wide' => 0,
-            'image_content_vertical_images' => 0,
-            'image_epsacrop_thumb' => 0,
-            'image_flexslider_full' => 0,
-            'image_front_slideshow_image' => 0,
-            'image_full-width' => 0,
-            'image_full-width-mobile' => 0,
-            'image_full-width-narrow' => 0,
-            'image_full-width-normal' => 0,
-            'image_inline' => 0,
-            'image_inline-mobile' => 0,
-            'image_inline-narrow' => 0,
-            'image_inline-normal' => 0,
-            'image_large' => 0,
-            'image_medium' => 0,
-            'image_teaser_images' => 0,
-            'image_thumbnail' => 0,
-            'image_thumbnail-mobile' => 0,
-            'image_thumbnail-narrow' => 0,
-            'image_thumbnail-normal' => 0,
-            'link' => 0,
-          ),
-          'insert_width' => '',
-          'preview_image_style' => 'association_logo',
-          'progress_indicator' => 'throbber',
-        ),
         'type' => 'image_image',
         'weight' => '2',
       ),

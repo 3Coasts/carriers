@@ -106,11 +106,11 @@ function carriers_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'carrier' => 'carrier',
   );
-  /* Filter criterion: Content: Carrier Type(s) (field_carrier_type_s_) */
-  $handler->display->display_options['filters']['field_carrier_type_s__value']['id'] = 'field_carrier_type_s__value';
-  $handler->display->display_options['filters']['field_carrier_type_s__value']['table'] = 'field_data_field_carrier_type_s_';
-  $handler->display->display_options['filters']['field_carrier_type_s__value']['field'] = 'field_carrier_type_s__value';
-  $handler->display->display_options['filters']['field_carrier_type_s__value']['value'] = array(
+  /* Filter criterion: Content: Carrier Type(s) (field_carrier_type) */
+  $handler->display->display_options['filters']['field_carrier_type_value']['id'] = 'field_carrier_type_value';
+  $handler->display->display_options['filters']['field_carrier_type_value']['table'] = 'field_data_field_carrier_type';
+  $handler->display->display_options['filters']['field_carrier_type_value']['field'] = 'field_carrier_type_value';
+  $handler->display->display_options['filters']['field_carrier_type_value']['value'] = array(
     'Commercial' => 'Commercial',
   );
 
@@ -134,11 +134,11 @@ function carriers_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'carrier' => 'carrier',
   );
-  /* Filter criterion: Content: Carrier Type(s) (field_carrier_type_s_) */
-  $handler->display->display_options['filters']['field_carrier_type_s__value']['id'] = 'field_carrier_type_s__value';
-  $handler->display->display_options['filters']['field_carrier_type_s__value']['table'] = 'field_data_field_carrier_type_s_';
-  $handler->display->display_options['filters']['field_carrier_type_s__value']['field'] = 'field_carrier_type_s__value';
-  $handler->display->display_options['filters']['field_carrier_type_s__value']['value'] = array(
+  /* Filter criterion: Content: Carrier Type(s) (field_carrier_type) */
+  $handler->display->display_options['filters']['field_carrier_type_value']['id'] = 'field_carrier_type_value';
+  $handler->display->display_options['filters']['field_carrier_type_value']['table'] = 'field_data_field_carrier_type';
+  $handler->display->display_options['filters']['field_carrier_type_value']['field'] = 'field_carrier_type_value';
+  $handler->display->display_options['filters']['field_carrier_type_value']['value'] = array(
     'Personal' => 'Personal',
   );
   $export['carriers'] = $view;
