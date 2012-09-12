@@ -1,1 +1,5 @@
 # Instructions
+
+* Make sure "Features" module is added to the site and enabled.
+* Enable the "Carriers" feature module.
+* Go to admin/structure/features and enable the feature
