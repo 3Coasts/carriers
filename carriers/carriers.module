@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Carriers feature.
- */
-
-include_once 'carriers.features.inc';
