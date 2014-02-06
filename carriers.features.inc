@@ -7,8 +7,7 @@
 /**
  * Implements hook_ctools_plugin_api().
  */
-function carriers_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
+function carriers_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -17,8 +16,8 @@ function carriers_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function carriers_views_api() {
-  return array("version" => "3.0");
+function carriers_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
@@ -27,7 +26,7 @@ function carriers_views_api() {
 function carriers_image_default_styles() {
   $styles = array();
 
-  // Exported image style: association_logo
+  // Exported image style: association_logo.
   $styles['association_logo'] = array(
     'name' => 'association_logo',
     'effects' => array(
@@ -41,43 +40,16 @@ function carriers_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale',
         'data' => array(
-          'width' => '180',
-          'height' => '180',
+          'width' => 180,
+          'height' => 180,
           'upscale' => 1,
         ),
-        'weight' => '2',
+        'weight' => 2,
       ),
-      54 => array(
-        'label' => 'Define canvas',
-        'help' => 'Define the size of the working canvas and background color, this controls the dimensions of the output image.',
-        'effect callback' => 'canvasactions_definecanvas_image',
-        'form callback' => 'canvasactions_definecanvas_form',
-        'summary theme' => 'canvasactions_definecanvas_summary',
-        'module' => 'imagecache_canvasactions',
-        'name' => 'canvasactions_definecanvas',
-        'data' => array(
-          'RGB' => array(
-            'HEX' => 'ffffff',
-          ),
-          'under' => 1,
-          'exact' => array(
-            'width' => '180',
-            'height' => '180',
-            'xpos' => 'center',
-            'ypos' => 'center',
-          ),
-          'relative' => array(
-            'leftdiff' => '',
-            'rightdiff' => '',
-            'topdiff' => '',
-            'bottomdiff' => '',
-          ),
-        ),
-        'weight' => '3',
-      ),
+      54 => NULL,
     ),
+    'label' => 'association_logo',
   );
-
 
   return $styles;
 }
