@@ -30,19 +30,60 @@ function carriers_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '2';
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_carrier_logo' => 'field_carrier_logo',
+    'title' => 'field_carrier_logo',
+    'field_carrier_link' => 'field_carrier_link',
+    'field_carrier_telephone' => 'field_carrier_telephone',
+    'field_carrier_addl_info' => 'field_carrier_addl_info',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_carrier_logo' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_carrier_link' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_carrier_telephone' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_carrier_addl_info' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
   /* Field: Content: Logo */
-  $handler->display->display_options['fields']['field_logo']['id'] = 'field_logo';
-  $handler->display->display_options['fields']['field_logo']['table'] = 'field_data_field_logo';
-  $handler->display->display_options['fields']['field_logo']['field'] = 'field_logo';
-  $handler->display->display_options['fields']['field_logo']['label'] = '';
-  $handler->display->display_options['fields']['field_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_logo']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_logo']['settings'] = array(
-    'image_style' => 'association_logo',
-    'image_link' => 'content',
+  $handler->display->display_options['fields']['field_carrier_logo']['id'] = 'field_carrier_logo';
+  $handler->display->display_options['fields']['field_carrier_logo']['table'] = 'field_data_field_carrier_logo';
+  $handler->display->display_options['fields']['field_carrier_logo']['field'] = 'field_carrier_logo';
+  $handler->display->display_options['fields']['field_carrier_logo']['label'] = '';
+  $handler->display->display_options['fields']['field_carrier_logo']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_carrier_logo']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_carrier_logo']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => '',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -52,6 +93,30 @@ function carriers_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Claims Link */
+  $handler->display->display_options['fields']['field_carrier_link']['id'] = 'field_carrier_link';
+  $handler->display->display_options['fields']['field_carrier_link']['table'] = 'field_data_field_carrier_link';
+  $handler->display->display_options['fields']['field_carrier_link']['field'] = 'field_carrier_link';
+  $handler->display->display_options['fields']['field_carrier_link']['label'] = '';
+  $handler->display->display_options['fields']['field_carrier_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_carrier_link']['click_sort_column'] = 'url';
+  /* Field: Content: Telephone Numbers */
+  $handler->display->display_options['fields']['field_carrier_telephone']['id'] = 'field_carrier_telephone';
+  $handler->display->display_options['fields']['field_carrier_telephone']['table'] = 'field_data_field_carrier_telephone';
+  $handler->display->display_options['fields']['field_carrier_telephone']['field'] = 'field_carrier_telephone';
+  $handler->display->display_options['fields']['field_carrier_telephone']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_carrier_telephone']['multi_type'] = 'ul';
+  /* Field: Content: Additional Info */
+  $handler->display->display_options['fields']['field_carrier_addl_info']['id'] = 'field_carrier_addl_info';
+  $handler->display->display_options['fields']['field_carrier_addl_info']['table'] = 'field_data_field_carrier_addl_info';
+  $handler->display->display_options['fields']['field_carrier_addl_info']['field'] = 'field_carrier_addl_info';
+  $handler->display->display_options['fields']['field_carrier_addl_info']['label'] = '';
+  $handler->display->display_options['fields']['field_carrier_addl_info']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_carrier_addl_info']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['field_carrier_addl_info']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_carrier_addl_info']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_carrier_addl_info']['element_wrapper_class'] = 'additionalinfo';
+  $handler->display->display_options['fields']['field_carrier_addl_info']['element_default_classes'] = FALSE;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
