@@ -118,11 +118,11 @@ function carriers_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_link',
-    'label' => 'Links',
+    'label' => 'Claims Link',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
-        'class' => 'clg-carrier-link',
+        'class' => 'carrier-link',
         'configurable_title' => 0,
         'rel' => '',
         'target' => '_blank',
@@ -132,9 +132,10 @@ function carriers_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
-      'title' => 'optional',
+      'rel_remove' => 'default',
+      'title' => 'value',
       'title_maxlength' => 128,
-      'title_value' => '',
+      'title_value' => 'Online Claims',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -246,7 +247,7 @@ function carriers_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Carrier Type(s)');
-  t('Links');
+  t('Claims Link');
   t('Logo');
   t('Telephone Numbers');
 
